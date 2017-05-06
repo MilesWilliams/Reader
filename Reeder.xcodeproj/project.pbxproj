@@ -12,6 +12,9 @@
 		026820721EBD2A0300B4B678 /* Reeder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 026820701EBD2A0300B4B678 /* Reeder.xcdatamodeld */; };
 		026820741EBD2A0300B4B678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026820731EBD2A0300B4B678 /* Assets.xcassets */; };
 		026820771EBD2A0300B4B678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026820751EBD2A0300B4B678 /* Main.storyboard */; };
+		0268207F1EBD368700B4B678 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268207E1EBD368700B4B678 /* NavigationViewController.swift */; };
+		026820811EBD371900B4B678 /* ReederSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026820801EBD371900B4B678 /* ReederSplitViewController.swift */; };
+		026820841EBD381F00B4B678 /* ReederSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026820831EBD381F00B4B678 /* ReederSplitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		026820731EBD2A0300B4B678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		026820761EBD2A0300B4B678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		026820781EBD2A0300B4B678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0268207E1EBD368700B4B678 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		026820801EBD371900B4B678 /* ReederSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReederSplitViewController.swift; sourceTree = "<group>"; };
+		026820831EBD381F00B4B678 /* ReederSplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReederSplitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		0268206B1EBD2A0300B4B678 /* Reeder */ = {
 			isa = PBXGroup;
 			children = (
+				026820821EBD37F900B4B678 /* Views */,
 				0268206C1EBD2A0300B4B678 /* AppDelegate.swift */,
-				0268206E1EBD2A0300B4B678 /* ViewController.swift */,
 				026820731EBD2A0300B4B678 /* Assets.xcassets */,
 				026820751EBD2A0300B4B678 /* Main.storyboard */,
 				026820781EBD2A0300B4B678 /* Info.plist */,
 				026820701EBD2A0300B4B678 /* Reeder.xcdatamodeld */,
 			);
 			path = Reeder;
+			sourceTree = "<group>";
+		};
+		026820821EBD37F900B4B678 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0268206E1EBD2A0300B4B678 /* ViewController.swift */,
+				0268207E1EBD368700B4B678 /* NavigationViewController.swift */,
+				026820801EBD371900B4B678 /* ReederSplitViewController.swift */,
+				026820831EBD381F00B4B678 /* ReederSplitView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,9 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				026820841EBD381F00B4B678 /* ReederSplitView.swift in Sources */,
 				026820721EBD2A0300B4B678 /* Reeder.xcdatamodeld in Sources */,
 				0268206F1EBD2A0300B4B678 /* ViewController.swift in Sources */,
+				026820811EBD371900B4B678 /* ReederSplitViewController.swift in Sources */,
 				0268206D1EBD2A0300B4B678 /* AppDelegate.swift in Sources */,
+				0268207F1EBD368700B4B678 /* NavigationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

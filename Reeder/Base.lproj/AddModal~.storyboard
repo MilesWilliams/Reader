@@ -1187,12 +1187,97 @@
                         <outlet property="pdfButton" destination="mcX-aG-GZ1" id="RkY-ov-74N"/>
                         <outlet property="starredButton" destination="fiR-jX-Mls" id="CLV-Ff-OQy"/>
                         <outlet property="tagsButton" destination="2ko-s8-Ccg" id="iWx-GV-ept"/>
-                        <segue destination="yR3-k1-hK8" kind="modal" identifier="ToAddModalSegue" id="TaT-uW-OTv"/>
                     </connections>
                 </viewController>
                 <customObject id="lbs-1H-hRB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-156" y="1213"/>
+        </scene>
+        <!--Add Feed Modal View Controller-->
+        <scene sceneID="G7z-Aq-yot">
+            <objects>
+                <viewController showSeguePresentationStyle="single" id="AWw-vf-ncX" customClass="addFeedModalViewController" customModule="Reeder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="wUC-9q-X1x">
+                        <rect key="frame" x="0.0" y="0.0" width="177" height="131"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box alphaValue="0.57999999999999996" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="2RU-39-gsR">
+                                <rect key="frame" x="0.0" y="0.0" width="177" height="131"/>
+                                <view key="contentView" id="xu3-xo-cZ9">
+                                    <rect key="frame" x="1" y="1" width="175" height="129"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjx-CC-qHv">
+                                            <rect key="frame" x="13" y="98" width="73" height="16"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Add a Feed" id="yf0-TO-mht">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSy-J3-aRe">
+                                            <rect key="frame" x="15" y="56" width="145" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="145" id="brd-r0-Ek5"/>
+                                                <constraint firstAttribute="height" constant="22" id="e5S-ba-APz"/>
+                                            </constraints>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Rss url" drawsBackground="YES" id="uvq-6V-dJt">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1PN-JP-Iia">
+                                            <rect key="frame" x="9" y="8" width="88" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="76" id="Lxd-rP-ze4"/>
+                                                <constraint firstAttribute="height" constant="21" id="MEN-cN-MTF"/>
+                                            </constraints>
+                                            <buttonCell key="cell" type="push" title="Add Feed" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="z9C-qJ-rn0">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SSy-J3-aRe" firstAttribute="leading" secondItem="xu3-xo-cZ9" secondAttribute="leading" constant="15" id="BHa-lO-kig"/>
+                                        <constraint firstAttribute="trailing" secondItem="SSy-J3-aRe" secondAttribute="trailing" constant="15" id="BJP-tZ-h17"/>
+                                        <constraint firstItem="1PN-JP-Iia" firstAttribute="top" secondItem="SSy-J3-aRe" secondAttribute="bottom" constant="20" id="HIC-fV-ffh"/>
+                                        <constraint firstItem="1PN-JP-Iia" firstAttribute="leading" secondItem="xu3-xo-cZ9" secondAttribute="leading" constant="15" id="IRe-m6-bEi"/>
+                                        <constraint firstItem="qjx-CC-qHv" firstAttribute="leading" secondItem="xu3-xo-cZ9" secondAttribute="leading" constant="15" id="Iyj-ds-U2l"/>
+                                        <constraint firstAttribute="trailing" secondItem="1PN-JP-Iia" secondAttribute="trailing" constant="84" id="OPA-Ed-boC"/>
+                                        <constraint firstItem="SSy-J3-aRe" firstAttribute="top" secondItem="qjx-CC-qHv" secondAttribute="bottom" constant="20" id="STn-1W-EW8"/>
+                                        <constraint firstItem="1PN-JP-Iia" firstAttribute="top" secondItem="SSy-J3-aRe" secondAttribute="bottom" constant="20" id="Wbk-Rr-9sS"/>
+                                        <constraint firstAttribute="bottom" secondItem="1PN-JP-Iia" secondAttribute="bottom" constant="15" id="kbU-JN-B5j"/>
+                                        <constraint firstItem="qjx-CC-qHv" firstAttribute="top" secondItem="xu3-xo-cZ9" secondAttribute="top" constant="15" id="zjR-Zf-XYo"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="131" id="Tja-WT-Ura"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="177" id="aLh-yL-vrn"/>
+                                    <constraint firstAttribute="height" constant="131" id="eqw-Tw-MhV"/>
+                                    <constraint firstAttribute="width" constant="177" id="w0N-h6-nKf"/>
+                                </constraints>
+                                <shadow key="shadow" blurRadius="2">
+                                    <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </shadow>
+                                <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2RU-39-gsR" secondAttribute="bottom" id="EXq-jD-crZ"/>
+                            <constraint firstItem="2RU-39-gsR" firstAttribute="top" secondItem="wUC-9q-X1x" secondAttribute="top" id="NnS-fR-DdT"/>
+                            <constraint firstAttribute="trailing" secondItem="2RU-39-gsR" secondAttribute="trailing" id="aI5-Rb-bfk"/>
+                            <constraint firstItem="2RU-39-gsR" firstAttribute="leading" secondItem="wUC-9q-X1x" secondAttribute="leading" id="tp9-x5-908"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addModal" destination="2RU-39-gsR" id="fcS-3o-Bdw"/>
+                    </connections>
+                </viewController>
+                <customObject id="hxI-Us-OCz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-156" y="1600"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Oyj-m8-2gq">
@@ -1219,14 +1304,6 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="602" y="1169"/>
-        </scene>
-        <!--AddModal-->
-        <scene sceneID="9hW-hG-YTb">
-            <objects>
-                <controllerPlaceholder storyboardName="AddModal" id="yR3-k1-hK8" sceneMemberID="viewController"/>
-                <customObject id="j1h-3G-x5g" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-156" y="1802"/>
         </scene>
     </scenes>
     <resources>

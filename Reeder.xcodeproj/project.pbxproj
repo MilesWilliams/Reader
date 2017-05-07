@@ -16,8 +16,8 @@
 		026820811EBD371900B4B678 /* ReederSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026820801EBD371900B4B678 /* ReederSplitViewController.swift */; };
 		026820841EBD381F00B4B678 /* ReederSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026820831EBD381F00B4B678 /* ReederSplitView.swift */; };
 		029124D01EBF2FEC00E2231E /* NavbarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029124CF1EBF2FEC00E2231E /* NavbarContainer.swift */; };
-		029124D21EBF585400E2231E /* addFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029124D11EBF585400E2231E /* addFeed.storyboard */; };
 		029124D41EBF5CD700E2231E /* addFeedModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029124D31EBF5CD700E2231E /* addFeedModalViewController.swift */; };
+		029124D91EBF687E00E2231E /* AddModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029124D81EBF687E00E2231E /* AddModal.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,8 @@
 		026820801EBD371900B4B678 /* ReederSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReederSplitViewController.swift; sourceTree = "<group>"; };
 		026820831EBD381F00B4B678 /* ReederSplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReederSplitView.swift; sourceTree = "<group>"; };
 		029124CF1EBF2FEC00E2231E /* NavbarContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavbarContainer.swift; sourceTree = "<group>"; };
-		029124D11EBF585400E2231E /* addFeed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = addFeed.storyboard; sourceTree = "<group>"; };
 		029124D31EBF5CD700E2231E /* addFeedModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addFeedModalViewController.swift; sourceTree = "<group>"; };
+		029124D81EBF687E00E2231E /* AddModal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddModal.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				026820751EBD2A0300B4B678 /* Main.storyboard */,
+				029124D81EBF687E00E2231E /* AddModal.storyboard */,
 				026820831EBD381F00B4B678 /* ReederSplitView.swift */,
 				029124CF1EBF2FEC00E2231E /* NavbarContainer.swift */,
-				029124D11EBF585400E2231E /* addFeed.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -158,7 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				029124D21EBF585400E2231E /* addFeed.storyboard in Resources */,
+				029124D91EBF687E00E2231E /* AddModal.storyboard in Resources */,
 				026820741EBD2A0300B4B678 /* Assets.xcassets in Resources */,
 				026820771EBD2A0300B4B678 /* Main.storyboard in Resources */,
 			);

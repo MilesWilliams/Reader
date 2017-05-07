@@ -10,29 +10,56 @@ import Cocoa
 
 class NavigationViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
 
-    @IBOutlet var navigationTableView: NSTableView!
-
-    @IBOutlet var settingsButton: NSButton!
+    @IBOutlet var addButton: NSButton!
+    @IBOutlet var categoriesButton: NSButton!
+    @IBOutlet var starredButton: NSButton!
+    @IBOutlet var notesButton: NSButton!
+    @IBOutlet var tagsButton: NSButton!
+    @IBOutlet var booksButton: NSButton!
+    @IBOutlet var pdfButton: NSButton!
+   
+    @IBOutlet var addMenu: NSBox!
+    
     override func viewDidLoad() {
+
         super.viewDidLoad()
         // Do view setup here.
+        let pinkrose = NSColor(red: 24/255.0, green: 25/255.0, blue: 29/255.0, alpha: 1.0)
         view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor.blue.cgColor
-        self.navigationTableView.backgroundColor = NSColor.blue
-        self.navigationTableView.reloadData()
+        view.layer?.backgroundColor = pinkrose.cgColor
+        self.addButton.image = NSImage(named: "add")
+        self.categoriesButton.image = NSImage(named: "categories")
+        self.starredButton.image = NSImage(named: "star")
+        self.tagsButton.image = NSImage(named: "tags")
+        self.notesButton.image = NSImage(named: "notes")
+        self.booksButton.image = NSImage(named: "book")
+        self.pdfButton.image = NSImage(named: "pdf")
+        self.addMenu.isHidden = true
 
-    }
-    
-    func numberOfRows(in tableView:NSTableView) -> Int{
-        
-        return 6
-    }
-    
-    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
 
-        let cell = tableView.make(withIdentifier: "addCell", owner: self) as? NSTableCellView
-        cell?.imageView?.image = NSImage(named: "add")
+
         
-        return cell
     }
+
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToAddModalSegue" {
+        
+        }
+    }
+
+    @IBAction func newFeed(_ sender: NSButton) {
+        print("new feed")
+        self.performSegue(withIdentifier: "ToAddModalSegue", sender: Any?.self)
+    }
+    @IBAction func addFeed(_ sender: NSButton) {
+        print("click")
+        if(self.addMenu.isHidden == true) {
+            self.addMenu.isHidden = false
+            self.addMenu.contentView?.isHidden = false
+        } else {
+            self.addMenu.isHidden = true
+            self.addMenu.contentView?.isHidden = true
+        }
+    }
+
 }

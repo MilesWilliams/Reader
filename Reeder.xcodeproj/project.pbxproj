@@ -18,6 +18,8 @@
 		029124D01EBF2FEC00E2231E /* NavbarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029124CF1EBF2FEC00E2231E /* NavbarContainer.swift */; };
 		029124D41EBF5CD700E2231E /* addFeedModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029124D31EBF5CD700E2231E /* addFeedModalViewController.swift */; };
 		029124D91EBF687E00E2231E /* AddModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029124D81EBF687E00E2231E /* AddModal.storyboard */; };
+		029124DC1EBF700600E2231E /* SquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029124DB1EBF700600E2231E /* SquareButton.swift */; };
+		02CC1AC01EBF7E9A0002B217 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CC1ABF1EBF7E9A0002B217 /* XMLParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		029124CF1EBF2FEC00E2231E /* NavbarContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavbarContainer.swift; sourceTree = "<group>"; };
 		029124D31EBF5CD700E2231E /* addFeedModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addFeedModalViewController.swift; sourceTree = "<group>"; };
 		029124D81EBF687E00E2231E /* AddModal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddModal.storyboard; sourceTree = "<group>"; };
+		029124DB1EBF700600E2231E /* SquareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareButton.swift; sourceTree = "<group>"; };
+		02CC1ABF1EBF7E9A0002B217 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 		0268206B1EBD2A0300B4B678 /* Reeder */ = {
 			isa = PBXGroup;
 			children = (
+				02CC1ABE1EBF7E800002B217 /* Handlers */,
+				029124DA1EBF6FC800E2231E /* UI Elements */,
 				029124CE1EBF2FA000E2231E /* Controllers */,
 				026820821EBD37F900B4B678 /* Views */,
 				0268206C1EBD2A0300B4B678 /* AppDelegate.swift */,
@@ -96,6 +102,22 @@
 				029124D31EBF5CD700E2231E /* addFeedModalViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		029124DA1EBF6FC800E2231E /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				029124DB1EBF700600E2231E /* SquareButton.swift */,
+			);
+			name = "UI Elements";
+			sourceTree = "<group>";
+		};
+		02CC1ABE1EBF7E800002B217 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				02CC1ABF1EBF7E9A0002B217 /* XMLParser.swift */,
+			);
+			name = Handlers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +197,9 @@
 				026820841EBD381F00B4B678 /* ReederSplitView.swift in Sources */,
 				026820721EBD2A0300B4B678 /* Reeder.xcdatamodeld in Sources */,
 				0268206F1EBD2A0300B4B678 /* ViewController.swift in Sources */,
+				02CC1AC01EBF7E9A0002B217 /* XMLParser.swift in Sources */,
 				026820811EBD371900B4B678 /* ReederSplitViewController.swift in Sources */,
+				029124DC1EBF700600E2231E /* SquareButton.swift in Sources */,
 				029124D01EBF2FEC00E2231E /* NavbarContainer.swift in Sources */,
 				0268206D1EBD2A0300B4B678 /* AppDelegate.swift in Sources */,
 				0268207F1EBD368700B4B678 /* NavigationViewController.swift in Sources */,

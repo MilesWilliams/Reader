@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="oYb-iL-X4n">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="b14-lt-CUe">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
@@ -7,40 +7,100 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add Feed Modal View Controller-->
         <scene sceneID="9bC-fG-2pb">
             <objects>
-                <viewController id="oYb-iL-X4n" sceneMemberID="viewController">
+                <viewController id="oYb-iL-X4n" customClass="addFeedModalViewController" customModule="Reeder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Xis-5j-6q6">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="182"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="ntC-oO-EWD">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="xTJ-Cg-n3U">
-                                    <rect key="frame" x="1" y="1" width="198" height="298"/>
+                            <box boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="ntC-oO-EWD">
+                                <rect key="frame" x="0.0" y="5" width="200" height="177"/>
+                                <view key="contentView" wantsLayer="YES" id="xTJ-Cg-n3U">
+                                    <rect key="frame" x="1" y="1" width="198" height="175"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pi-XY-skE">
-                                            <rect key="frame" x="87" y="181" width="37" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="cpy-zb-d5b">
-                                                <font key="font" metaFont="system"/>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaR-RX-Gz5">
+                                            <rect key="frame" x="13" y="125" width="92" height="30"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Add a feed" id="GcQ-O9-1er">
+                                                <font key="font" size="20" name="SanFranciscoDisplay-Ultralight"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chb-cP-gbQ">
+                                            <rect key="frame" x="15" y="87" width="168" height="28"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="none" placeholderString="url..." drawsBackground="YES" id="7hn-3J-bKa">
+                                                <font key="font" size="15" name="SanFranciscoDisplay-Regular"/>
+                                                <color key="textColor" red="0.094117647060000004" green="0.098039215690000001" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mpw-q3-1hE">
+                                            <rect key="frame" x="15" y="42" width="80" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="hjK-xX-a3q"/>
+                                            </constraints>
+                                            <buttonCell key="cell" type="roundRect" title="Add" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p37-fi-p5a">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" size="13" name="SanFranciscoDisplay-Regular"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="addFeed:" target="oYb-iL-X4n" id="QEn-RU-9Ok"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AaR-RX-Gz5" firstAttribute="leading" secondItem="Chb-cP-gbQ" secondAttribute="leading" id="00c-HD-uBw"/>
+                                        <constraint firstItem="Mpw-q3-1hE" firstAttribute="top" secondItem="Chb-cP-gbQ" secondAttribute="bottom" constant="26" id="9HB-el-djw"/>
+                                        <constraint firstItem="AaR-RX-Gz5" firstAttribute="leading" secondItem="xTJ-Cg-n3U" secondAttribute="leading" constant="15" id="Cki-EK-sbo"/>
+                                        <constraint firstItem="Chb-cP-gbQ" firstAttribute="centerX" secondItem="xTJ-Cg-n3U" secondAttribute="centerX" id="E6J-1S-VOa"/>
+                                        <constraint firstItem="AaR-RX-Gz5" firstAttribute="top" secondItem="xTJ-Cg-n3U" secondAttribute="top" constant="20" symbolic="YES" id="HIg-EX-fIo"/>
+                                        <constraint firstItem="Chb-cP-gbQ" firstAttribute="leading" secondItem="Mpw-q3-1hE" secondAttribute="leading" id="XOL-gN-AOO"/>
+                                        <constraint firstItem="Chb-cP-gbQ" firstAttribute="top" secondItem="AaR-RX-Gz5" secondAttribute="bottom" constant="10" id="v5y-3U-VuG"/>
+                                    </constraints>
                                 </view>
+                                <color key="borderColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </box>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="ntC-oO-EWD" firstAttribute="leading" secondItem="Xis-5j-6q6" secondAttribute="leading" id="9KH-C4-Dlh"/>
+                            <constraint firstAttribute="bottom" secondItem="ntC-oO-EWD" secondAttribute="bottom" constant="5" id="cV2-ub-iOK"/>
+                            <constraint firstItem="ntC-oO-EWD" firstAttribute="top" secondItem="Xis-5j-6q6" secondAttribute="top" id="hkQ-Ko-17D"/>
+                            <constraint firstAttribute="trailing" secondItem="ntC-oO-EWD" secondAttribute="trailing" id="x7c-Dr-JcG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addFeedButton" destination="Mpw-q3-1hE" id="xbP-C5-b17"/>
+                        <outlet property="addModal" destination="ntC-oO-EWD" id="01P-lq-ubn"/>
+                        <outlet property="urlTextField" destination="Chb-cP-gbQ" id="BYD-Ok-NwD"/>
+                    </connections>
                 </viewController>
                 <customObject id="agv-aT-f6C" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-156" y="1802"/>
+            <point key="canvasLocation" x="119" y="2013"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="mBZ-yQ-Feh">
+            <objects>
+                <windowController id="b14-lt-CUe" sceneMemberID="viewController">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="fNv-61-3Gt">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="200" height="182"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+                        <value key="maxSize" type="size" width="200" height="182"/>
+                        <value key="maxFullScreenContentSize" type="size" width="200" height="300"/>
+                    </window>
+                    <connections>
+                        <segue destination="oYb-iL-X4n" kind="relationship" relationship="window.shadowedContentViewController" id="Xvh-Wu-Cdp"/>
+                    </connections>
+                </windowController>
+                <customObject id="M04-9a-Vyk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-296" y="2087"/>
         </scene>
     </scenes>
 </document>

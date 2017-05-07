@@ -17,6 +17,7 @@ class NavigationViewController: NSViewController, NSTableViewDelegate, NSTableVi
     @IBOutlet var tagsButton: NSButton!
     @IBOutlet var booksButton: NSButton!
     @IBOutlet var pdfButton: NSButton!
+    @IBOutlet var settingsButton: NSButton!
    
     @IBOutlet var addMenu: NSBox!
     
@@ -56,6 +57,7 @@ class NavigationViewController: NSViewController, NSTableViewDelegate, NSTableVi
         if(self.addMenu.isHidden == true) {
             self.addMenu.isHidden = false
             self.addMenu.contentView?.isHidden = false
+            
         } else {
             self.addMenu.isHidden = true
             self.addMenu.contentView?.isHidden = true

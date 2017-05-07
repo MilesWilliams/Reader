@@ -1185,6 +1185,7 @@
                         <outlet property="categoriesButton" destination="LDZ-1Y-kuc" id="Ck6-1L-Rgn"/>
                         <outlet property="notesButton" destination="T4F-2J-mt1" id="alh-eh-kcr"/>
                         <outlet property="pdfButton" destination="mcX-aG-GZ1" id="RkY-ov-74N"/>
+                        <outlet property="settingsButton" destination="BEk-yF-RAR" id="64c-fc-oYd"/>
                         <outlet property="starredButton" destination="fiR-jX-Mls" id="CLV-Ff-OQy"/>
                         <outlet property="tagsButton" destination="2ko-s8-Ccg" id="iWx-GV-ept"/>
                         <segue destination="yR3-k1-hK8" kind="modal" identifier="ToAddModalSegue" id="TaT-uW-OTv"/>
@@ -1193,19 +1194,6 @@
                 <customObject id="lbs-1H-hRB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-156" y="1213"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Oyj-m8-2gq">
-            <objects>
-                <viewController id="mAx-mp-rHg" sceneMemberID="viewController">
-                    <view key="view" id="FnH-mY-8YH">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="ges-9B-ca3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="385" y="1696"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wEt-sn-DD5">

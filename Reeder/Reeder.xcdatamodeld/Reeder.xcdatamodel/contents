@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Categories" representedClassName="Categories" syncable="YES">
+        <attribute name="categoryDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="icon" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="websites" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="website" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Website" inverseName="websiteCategory" inverseEntity="Website" syncable="YES"/>
+    </entity>
+    <entity name="Feed" representedClassName="Feed" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="read" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="starred" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="ownerWebsite" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Website" inverseName="websiteFeeds" inverseEntity="Website" syncable="YES"/>
+    </entity>
+    <entity name="Website" representedClassName="Website" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favicon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="websiteCategory" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categories" inverseName="website" inverseEntity="Categories" syncable="YES"/>
+        <relationship name="websiteFeeds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Feed" inverseName="ownerWebsite" inverseEntity="Feed" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Website" positionX="-270" positionY="-18" width="128" height="133"/>
+        <element name="Categories" positionX="-54" positionY="18" width="128" height="118"/>
+        <element name="Feed" positionX="-218" positionY="153" width="128" height="163"/>
+    </elements>
 </model>

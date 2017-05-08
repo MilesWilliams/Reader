@@ -12,17 +12,17 @@
             <objects>
                 <viewController id="oYb-iL-X4n" customClass="addFeedModalViewController" customModule="Reeder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Xis-5j-6q6">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="182"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="256"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="ntC-oO-EWD">
-                                <rect key="frame" x="0.0" y="5" width="200" height="177"/>
+                                <rect key="frame" x="0.0" y="5" width="200" height="251"/>
                                 <view key="contentView" wantsLayer="YES" id="xTJ-Cg-n3U">
-                                    <rect key="frame" x="1" y="1" width="198" height="175"/>
+                                    <rect key="frame" x="1" y="1" width="198" height="249"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaR-RX-Gz5">
-                                            <rect key="frame" x="13" y="125" width="92" height="30"/>
+                                            <rect key="frame" x="13" y="199" width="92" height="30"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Add a feed" id="GcQ-O9-1er">
                                                 <font key="font" size="20" name="SanFranciscoDisplay-Ultralight"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -30,7 +30,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chb-cP-gbQ">
-                                            <rect key="frame" x="15" y="87" width="168" height="28"/>
+                                            <rect key="frame" x="15" y="161" width="168" height="28"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="none" placeholderString="url..." drawsBackground="YES" id="7hn-3J-bKa">
                                                 <font key="font" size="15" name="SanFranciscoDisplay-Regular"/>
                                                 <color key="textColor" red="0.094117647060000004" green="0.098039215690000001" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,9 +38,11 @@
                                             </textFieldCell>
                                         </textField>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mpw-q3-1hE">
-                                            <rect key="frame" x="15" y="42" width="80" height="19"/>
+                                            <rect key="frame" x="15" y="52" width="80" height="19"/>
                                             <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="ZDt-PN-P7I"/>
                                                 <constraint firstAttribute="width" constant="80" id="hjK-xX-a3q"/>
+                                                <constraint firstAttribute="height" constant="18" id="tyC-nB-QxO"/>
                                             </constraints>
                                             <buttonCell key="cell" type="roundRect" title="Add" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p37-fi-p5a">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -50,15 +52,48 @@
                                                 <action selector="addFeed:" target="oYb-iL-X4n" id="QEn-RU-9Ok"/>
                                             </connections>
                                         </button>
+                                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ybE-5e-BjA">
+                                            <rect key="frame" x="15" y="91" width="168" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="168" id="E29-Bn-PkZ"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="M0b-Qp-2ii"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="qKW-ez-vsY"/>
+                                                <constraint firstAttribute="height" constant="18" id="uWi-Dk-8p0"/>
+                                            </constraints>
+                                            <popUpButtonCell key="cell" type="roundRect" bezelStyle="roundedRect" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" arrowPosition="arrowAtCenter" id="Q8S-4p-PG5">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="cellTitle"/>
+                                                <menu key="menu" id="PkJ-Y9-d42"/>
+                                            </popUpButtonCell>
+                                        </popUpButton>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUU-HZ-R6Y">
+                                            <rect key="frame" x="13" y="122" width="79" height="19"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Categories" id="Jan-Nw-2Eo">
+                                                <font key="font" size="13" name="SanFranciscoDisplay-Regular"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="AaR-RX-Gz5" firstAttribute="leading" secondItem="Chb-cP-gbQ" secondAttribute="leading" id="00c-HD-uBw"/>
-                                        <constraint firstItem="Mpw-q3-1hE" firstAttribute="top" secondItem="Chb-cP-gbQ" secondAttribute="bottom" constant="26" id="9HB-el-djw"/>
+                                        <constraint firstAttribute="trailing" secondItem="Mpw-q3-1hE" secondAttribute="trailing" constant="103" id="2KB-sG-PYd"/>
+                                        <constraint firstAttribute="bottom" secondItem="Mpw-q3-1hE" secondAttribute="bottom" constant="53" id="8ST-gO-Fin"/>
+                                        <constraint firstItem="ybE-5e-BjA" firstAttribute="leading" secondItem="xTJ-Cg-n3U" secondAttribute="leading" constant="15" id="9Cb-8r-ofE"/>
                                         <constraint firstItem="AaR-RX-Gz5" firstAttribute="leading" secondItem="xTJ-Cg-n3U" secondAttribute="leading" constant="15" id="Cki-EK-sbo"/>
                                         <constraint firstItem="Chb-cP-gbQ" firstAttribute="centerX" secondItem="xTJ-Cg-n3U" secondAttribute="centerX" id="E6J-1S-VOa"/>
                                         <constraint firstItem="AaR-RX-Gz5" firstAttribute="top" secondItem="xTJ-Cg-n3U" secondAttribute="top" constant="20" symbolic="YES" id="HIg-EX-fIo"/>
-                                        <constraint firstItem="Chb-cP-gbQ" firstAttribute="leading" secondItem="Mpw-q3-1hE" secondAttribute="leading" id="XOL-gN-AOO"/>
+                                        <constraint firstItem="QUU-HZ-R6Y" firstAttribute="leading" secondItem="xTJ-Cg-n3U" secondAttribute="leading" constant="15" id="JnF-Xb-Y1T"/>
+                                        <constraint firstItem="Mpw-q3-1hE" firstAttribute="leading" secondItem="xTJ-Cg-n3U" secondAttribute="leading" constant="15" id="Qer-ro-JnJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="ybE-5e-BjA" secondAttribute="trailing" constant="15" id="Xy4-fc-MzE"/>
+                                        <constraint firstItem="Mpw-q3-1hE" firstAttribute="top" secondItem="ybE-5e-BjA" secondAttribute="bottom" constant="21" id="eJT-eB-4VS"/>
+                                        <constraint firstItem="ybE-5e-BjA" firstAttribute="top" secondItem="QUU-HZ-R6Y" secondAttribute="bottom" constant="12" id="fbr-PT-s7N"/>
+                                        <constraint firstItem="ybE-5e-BjA" firstAttribute="top" secondItem="QUU-HZ-R6Y" secondAttribute="bottom" constant="12" id="jnv-pf-EOT"/>
+                                        <constraint firstItem="QUU-HZ-R6Y" firstAttribute="top" secondItem="Chb-cP-gbQ" secondAttribute="bottom" constant="20" id="kLW-2x-Zvy"/>
+                                        <constraint firstAttribute="trailing" secondItem="QUU-HZ-R6Y" secondAttribute="trailing" constant="108" id="nzP-Vw-b4H"/>
+                                        <constraint firstItem="Mpw-q3-1hE" firstAttribute="top" secondItem="ybE-5e-BjA" secondAttribute="bottom" constant="21" id="sIh-il-aHc"/>
                                         <constraint firstItem="Chb-cP-gbQ" firstAttribute="top" secondItem="AaR-RX-Gz5" secondAttribute="bottom" constant="10" id="v5y-3U-VuG"/>
+                                        <constraint firstAttribute="trailing" secondItem="ybE-5e-BjA" secondAttribute="trailing" constant="15" id="xUf-KJ-8Tc"/>
                                     </constraints>
                                 </view>
                                 <color key="borderColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -75,12 +110,13 @@
                     <connections>
                         <outlet property="addFeedButton" destination="Mpw-q3-1hE" id="xbP-C5-b17"/>
                         <outlet property="addModal" destination="ntC-oO-EWD" id="01P-lq-ubn"/>
+                        <outlet property="categorySelectButton" destination="ybE-5e-BjA" id="rIX-64-blR"/>
                         <outlet property="urlTextField" destination="Chb-cP-gbQ" id="BYD-Ok-NwD"/>
                     </connections>
                 </viewController>
                 <customObject id="agv-aT-f6C" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="2013"/>
+            <point key="canvasLocation" x="119" y="2050"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="mBZ-yQ-Feh">

@@ -48,6 +48,9 @@ class NavigationViewController: NSViewController, NSTableViewDelegate, NSTableVi
         }
     }
 
+    @IBAction func newCategoryClicked(_ sender: NSButton) {
+        self.performSegue(withIdentifier: "ToAddCategoriesSegue", sender: Any?.self)
+    }
     @IBAction func newFeed(_ sender: NSButton) {
         print("new feed")
         self.performSegue(withIdentifier: "ToAddModalSegue", sender: Any?.self)

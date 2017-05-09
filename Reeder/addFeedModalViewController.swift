@@ -52,15 +52,7 @@ class addFeedModalViewController: NSViewController {
             
             do {
                 let websites = try context.fetch(fetchWebsites)
-//                print(websites)
-                
-                if let website = websites.first {
-                    print(website)
-                    
-                    if let name = website.favicon {
-                        print(name)
-                    }
-                }
+
             } catch {
                 print(error)
             }
@@ -68,7 +60,33 @@ class addFeedModalViewController: NSViewController {
     
     }
     
-    @IBAction func addFeed(_ sender: NSButton) {
+    func checkRSSExists(rssURL: String) -> Bool {
+    
+        if let context = (NSApplication.shared().delegate as? AppDelegate)?.persistentContainer.viewContext{
+            
+            let fetchWebsites = Website.fetchRequest() as NSFetchRequest<Website>
+            fetchWebsites.predicate = NSPredicate(format: "url == %@", rssURL)
+            
+            do {
+                let matchingWebsites = try context.fetch(fetchWebsites)
+                
+                if matchingWebsites.count >= 1 {
+                
+                    return true
+                } else {
+                
+                    return false
+                }
+                
+            } catch {
+                print(error)
+            }
+        }
+        
+        return false
+    }
+    
+    @IBAction func addFeed(_ sender: Any) {
 
         
         if let url = URL(string: urlTextField.stringValue) {
@@ -81,16 +99,19 @@ class addFeedModalViewController: NSViewController {
                         let parser = XmlParser()
                         let info = parser.getRssFeedMetaData(data: data!)
                         
-                       if let context = (NSApplication.shared().delegate as? AppDelegate)?.persistentContainer.viewContext{
+                        if !self.checkRSSExists(rssURL: self.urlTextField.stringValue){
                         
-                            let website = Website(context: context)
+                            if let context = (NSApplication.shared().delegate as? AppDelegate)?.persistentContainer.viewContext{
+                            
+                                let website = Website(context: context)
 
-                            website.url = self.urlTextField.stringValue
-                            website.name = info.title
-                            website.favicon = info.faviconUrl
-                            website.category = self.categorySelectButton.titleOfSelectedItem
+                                website.url = self.urlTextField.stringValue
+                                website.name = info.title
+                                website.favicon = info.faviconUrl
+                                website.category = self.categorySelectButton.titleOfSelectedItem
 
-                            (NSApplication.shared().delegate as? AppDelegate)?.saveAction(nil)
+                                (NSApplication.shared().delegate as? AppDelegate)?.saveAction(nil)
+                            }
                         }
                         
                     }

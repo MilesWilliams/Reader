@@ -10,23 +10,56 @@ import Cocoa
 
 class RssFeedMenu: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource {
 
-    @IBOutlet var rssCollectionView: NSScrollView!
+
+    @IBOutlet var rssCollectionView: NSCollectionView!
+    var websitesMeta : [Website] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        self.fetchAllWebsiteMetaData()
+        rssCollectionView.delegate = self
+        rssCollectionView.dataSource = self
+        
+        let nib = NSNib(nibNamed: "RssWebsiteCollectionItem", bundle: nil)
+        rssCollectionView.register(nib, forItemWithIdentifier: "rssCollectionViewItem")
+        
+    }
+    
+    func fetchAllWebsiteMetaData() {
+        
+        if let context = (NSApplication.shared().delegate as? AppDelegate)?.persistentContainer.viewContext{
+            
+            let fetchWebsites = Website.fetchRequest() as NSFetchRequest<Website>
+                fetchWebsites.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+            
+            do {
+                // Set them to the class property
+                websitesMeta = try context.fetch(fetchWebsites)
+                print(websitesMeta.count)
+                
+            } catch {}
+    
+        }
     }
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        print(websitesMeta.count)
+        return websitesMeta.count
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let item = collectionView.makeItem(withIdentifier: "RssWebsiteCollectionItem", for: indexPath)
         
         guard let rssItem = item as? RssWebsiteCollectionItem else{ return item}
+        let favicon = NSImage(contentsOf: NSURL(string:websitesMeta[indexPath.item].favicon!)! as URL)
         
-        rssItem.view.wantsLayer = true
-        rssItem.view.layer?.backgroundColor = NSColor.blue.cgColor
+//        print(favicon)
+        rssItem.webSiteTitle.stringValue = websitesMeta[indexPath.item].name!
+        rssItem.websiteCategory.stringValue = websitesMeta[indexPath.item].category!
+        rssItem.websiteFavicon.image = favicon
+//        rssItem.view.wantsLayer = true
+//        rssItem.view.layer?.backgroundColor = NSColor.blue.cgColor
         
         return rssItem
     }

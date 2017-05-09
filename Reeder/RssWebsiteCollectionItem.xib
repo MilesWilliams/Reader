@@ -9,28 +9,32 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="RssWebsiteCollectionItem" customModule="Reeder" customModuleProvider="target">
             <connections>
+                <outlet property="textField" destination="VNu-Fn-ssu" id="k9v-Xc-h4r"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="webSiteTitle" destination="zVZ-ZD-B9O" id="QqS-hG-OMh"/>
+                <outlet property="websiteCategory" destination="VNu-Fn-ssu" id="l3R-Xs-CIp"/>
+                <outlet property="websiteFavicon" destination="z1G-zh-WLc" id="NCt-Aw-X3d"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView wantsLayer="YES" id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="86"/>
+        <customView wantsLayer="YES" misplaced="YES" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SsU-Km-XXa">
-                    <rect key="frame" x="75" y="23" width="95" height="41"/>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NXF-e2-5ve">
+                    <rect key="frame" x="90" y="2" width="95" height="44"/>
                     <subviews>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVZ-ZD-B9O">
-                            <rect key="frame" x="-2" y="17" width="99" height="24"/>
+                        <textField identifier="name" horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVZ-ZD-B9O">
+                            <rect key="frame" x="-2" y="20" width="99" height="24"/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="The Next Web" id="zR4-vT-4MA">
                                 <font key="font" size="16" name="SFCompactDisplay-Regular"/>
                                 <color key="textColor" red="0.094117647058823528" green="0.098039215686274508" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNu-Fn-ssu">
-                            <rect key="frame" x="-2" y="0.0" width="73" height="16"/>
+                        <textField identifier="category" horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNu-Fn-ssu">
+                            <rect key="frame" x="-2" y="0.0" width="73" height="20"/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Technology" id="xXR-XK-xvw">
                                 <font key="font" size="14" name="SanFranciscoDisplay-Regular"/>
                                 <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,6 +42,9 @@
                             </textFieldCell>
                         </textField>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="ldQ-8h-zT3"/>
+                    </constraints>
                     <visibilityPriorities>
                         <integer value="1000"/>
                         <integer value="1000"/>
@@ -47,35 +54,51 @@
                         <real value="3.4028234663852886e+38"/>
                     </customSpacing>
                 </stackView>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z1G-zh-WLc">
-                    <rect key="frame" x="20" y="24" width="35" height="35"/>
+                <imageView identifier="favicon" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z1G-zh-WLc">
+                    <rect key="frame" x="20" y="-4" width="50" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="35" id="UYn-aa-NVZ"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="hM9-1r-n84"/>
-                        <constraint firstAttribute="width" constant="35" id="tWc-Mj-slE"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="yBF-xa-IIp"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="IUU-Aj-dQT"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="OEj-4n-j8a"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="SoL-Ar-fG4"/>
+                        <constraint firstAttribute="height" constant="50" id="UYn-aa-NVZ"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="g8o-8r-UQT"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="hM9-1r-n84"/>
+                        <constraint firstAttribute="width" constant="50" id="tWc-Mj-slE"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="yBF-xa-IIp"/>
                     </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" id="aVA-KC-zJi"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="categories" id="aVA-KC-zJi"/>
                 </imageView>
             </subviews>
             <constraints>
                 <constraint firstItem="z1G-zh-WLc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="2Ud-gW-CiP"/>
+                <constraint firstItem="NXF-e2-5ve" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="4Qo-se-MJy"/>
+                <constraint firstItem="z1G-zh-WLc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="59Q-zj-G2u"/>
                 <constraint firstItem="z1G-zh-WLc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="8hh-uZ-EcY"/>
-                <constraint firstItem="SsU-Km-XXa" firstAttribute="leading" secondItem="z1G-zh-WLc" secondAttribute="trailing" constant="20" id="BfO-mX-RfY"/>
+                <constraint firstItem="NXF-e2-5ve" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="929-PG-I3Y"/>
                 <constraint firstItem="z1G-zh-WLc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="CcQ-We-vpe"/>
-                <constraint firstItem="z1G-zh-WLc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="23" id="JA2-TG-PI2"/>
-                <constraint firstAttribute="bottom" secondItem="z1G-zh-WLc" secondAttribute="bottom" constant="29" id="Oyy-en-Tkf"/>
-                <constraint firstAttribute="bottom" secondItem="z1G-zh-WLc" secondAttribute="bottom" constant="20" id="VAO-ve-LFm"/>
-                <constraint firstItem="z1G-zh-WLc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="VzC-CK-IEb"/>
-                <constraint firstAttribute="bottom" secondItem="SsU-Km-XXa" secondAttribute="bottom" constant="23" id="XEh-FY-y22"/>
-                <constraint firstItem="SsU-Km-XXa" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="22" id="XwU-GQ-zaj"/>
-                <constraint firstItem="SsU-Km-XXa" firstAttribute="leading" secondItem="z1G-zh-WLc" secondAttribute="trailing" constant="20" id="aR7-TM-yWZ"/>
-                <constraint firstItem="z1G-zh-WLc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="27" id="d5k-kc-HGr"/>
-                <constraint firstItem="SsU-Km-XXa" firstAttribute="leading" secondItem="z1G-zh-WLc" secondAttribute="trailing" constant="20" id="mRk-4o-ugn"/>
-                <constraint firstAttribute="bottom" secondItem="z1G-zh-WLc" secondAttribute="bottom" constant="24" id="tPq-z5-0UX"/>
+                <constraint firstItem="NXF-e2-5ve" firstAttribute="leading" secondItem="z1G-zh-WLc" secondAttribute="trailing" constant="20" id="KJR-TX-gZd"/>
+                <constraint firstItem="NXF-e2-5ve" firstAttribute="leading" secondItem="z1G-zh-WLc" secondAttribute="trailing" constant="20" id="Ma2-bT-nKa"/>
+                <constraint firstAttribute="bottom" secondItem="NXF-e2-5ve" secondAttribute="bottom" id="RdX-Mb-KVd"/>
+                <constraint firstAttribute="bottom" secondItem="NXF-e2-5ve" secondAttribute="bottom" constant="2" id="ST1-pV-jlC"/>
+                <constraint firstItem="NXF-e2-5ve" firstAttribute="leading" secondItem="z1G-zh-WLc" secondAttribute="trailing" constant="20" id="UFu-av-nxt"/>
+                <constraint firstItem="z1G-zh-WLc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="adM-Mx-HUb"/>
+                <constraint firstAttribute="bottom" secondItem="z1G-zh-WLc" secondAttribute="bottom" id="aph-DW-BiF"/>
+                <constraint firstItem="z1G-zh-WLc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="da9-hZ-ZdD"/>
+                <constraint firstItem="z1G-zh-WLc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="iVj-f9-pf0"/>
+                <constraint firstItem="NXF-e2-5ve" firstAttribute="leading" secondItem="z1G-zh-WLc" secondAttribute="trailing" constant="20" id="jJw-Pk-DbX"/>
             </constraints>
-            <point key="canvasLocation" x="14" y="262"/>
+            <point key="canvasLocation" x="14" y="264"/>
         </customView>
-        <collectionViewItem id="Zmz-3l-27u" customClass="RssWebsiteCollectionItem" customModule="Reeder" customModuleProvider="target"/>
+        <collectionViewItem id="Zmz-3l-27u" customClass="RssWebsiteCollectionItem" customModule="Reeder" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="FDp-om-GnP"/>
+                <outlet property="webSiteTitle" destination="zVZ-ZD-B9O" id="JKn-2t-eQB"/>
+                <outlet property="websiteCategory" destination="VNu-Fn-ssu" id="Op5-3E-I7p"/>
+                <outlet property="websiteFavicon" destination="z1G-zh-WLc" id="5Hc-WO-z1D"/>
+            </connections>
+        </collectionViewItem>
     </objects>
+    <resources>
+        <image name="categories" width="20" height="15"/>
+    </resources>
 </document>

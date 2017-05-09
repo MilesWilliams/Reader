@@ -21,6 +21,7 @@ class NavigationViewController: NSViewController, NSTableViewDelegate, NSTableVi
    
     @IBOutlet var addMenu: NSBox!
     
+    
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -35,7 +36,7 @@ class NavigationViewController: NSViewController, NSTableViewDelegate, NSTableVi
         self.notesButton.image = NSImage(named: "notes")
         self.booksButton.image = NSImage(named: "book")
         self.pdfButton.image = NSImage(named: "pdf")
-        self.addMenu.isHidden = true
+
 
 
 
@@ -51,20 +52,10 @@ class NavigationViewController: NSViewController, NSTableViewDelegate, NSTableVi
     @IBAction func newCategoryClicked(_ sender: NSButton) {
         self.performSegue(withIdentifier: "ToAddCategoriesSegue", sender: Any?.self)
     }
-    @IBAction func newFeed(_ sender: NSButton) {
-        print("new feed")
-        self.performSegue(withIdentifier: "ToAddModalSegue", sender: Any?.self)
-    }
+
     @IBAction func addFeed(_ sender: NSButton) {
         print("click")
-        if(self.addMenu.isHidden == true) {
-            self.addMenu.isHidden = false
-            self.addMenu.contentView?.isHidden = false
-            
-        } else {
-            self.addMenu.isHidden = true
-            self.addMenu.contentView?.isHidden = true
-        }
+
     }
 
 }

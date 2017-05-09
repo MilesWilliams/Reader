@@ -9,6 +9,8 @@
 import Cocoa
 
 class NavbarContainer: NSView {
+    
+//    var collectionView : FeedCollectionView
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)

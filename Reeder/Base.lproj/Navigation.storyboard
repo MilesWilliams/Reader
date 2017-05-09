@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="e8S-26-bCQ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Split View Controller-->
+        <scene sceneID="7q5-xZ-jKc">
+            <objects>
+                <splitViewController id="e8S-26-bCQ" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="wws-Sk-DFi"/>
+                        <splitViewItem id="X4F-Lj-ijp"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="fsC-Ss-T6f">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </splitView>
+                    <connections>
+                        <segue destination="E0C-Mu-hNw" kind="relationship" relationship="splitItems" id="npQ-mJ-97n"/>
+                        <segue destination="cfm-Oz-uhh" kind="relationship" relationship="splitItems" id="Yda-32-9Xp"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="fpa-eO-TCg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="1245"/>
+        </scene>
+        <!--NSViewController-1PZ-0u-tkb-->
+        <scene sceneID="oTK-Mm-Mvm">
+            <objects>
+                <controllerPlaceholder storyboardName="Main" referencedIdentifier="NSViewController-1PZ-0u-tkb" id="E0C-Mu-hNw" sceneMemberID="viewController"/>
+                <customObject id="9zq-Y2-bJX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24" y="1841"/>
+        </scene>
+        <!--NSViewController-de4-3l-NQ2-->
+        <scene sceneID="JwB-NB-Uq2">
+            <objects>
+                <controllerPlaceholder storyboardName="Main" referencedIdentifier="NSViewController-de4-3l-NQ2" id="cfm-Oz-uhh" sceneMemberID="viewController"/>
+                <customObject id="rnK-Mi-pwD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="1727"/>
+        </scene>
+    </scenes>
+</document>

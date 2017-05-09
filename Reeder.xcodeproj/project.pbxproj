@@ -30,6 +30,9 @@
 		029124D41EBF5CD700E2231E /* addFeedModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029124D31EBF5CD700E2231E /* addFeedModalViewController.swift */; };
 		029124D91EBF687E00E2231E /* AddModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029124D81EBF687E00E2231E /* AddModal.storyboard */; };
 		029124DC1EBF700600E2231E /* SquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029124DB1EBF700600E2231E /* SquareButton.swift */; };
+		02B58D891EC23C6F002115D1 /* AddMenuPopOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B58D881EC23C6F002115D1 /* AddMenuPopOver.swift */; };
+		02B58D8D1EC2644C002115D1 /* FeedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B58D8C1EC2644C002115D1 /* FeedCollectionView.swift */; };
+		02B58D901EC268F8002115D1 /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B58D8E1EC268F8002115D1 /* Navigation.storyboard */; };
 		02CC1AC01EBF7E9A0002B217 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CC1ABF1EBF7E9A0002B217 /* XMLParser.swift */; };
 		CCEDC9BD7E5CA669F240D1C7 /* Pods_Reeder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DF6F33A5F48176CC58C59E /* Pods_Reeder.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +63,9 @@
 		029124D31EBF5CD700E2231E /* addFeedModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addFeedModalViewController.swift; sourceTree = "<group>"; };
 		029124D81EBF687E00E2231E /* AddModal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddModal.storyboard; sourceTree = "<group>"; };
 		029124DB1EBF700600E2231E /* SquareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareButton.swift; sourceTree = "<group>"; };
+		02B58D881EC23C6F002115D1 /* AddMenuPopOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMenuPopOver.swift; sourceTree = "<group>"; };
+		02B58D8C1EC2644C002115D1 /* FeedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionView.swift; sourceTree = "<group>"; };
+		02B58D8F1EC268F8002115D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Navigation.storyboard; sourceTree = "<group>"; };
 		02CC1ABF1EBF7E9A0002B217 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		23DF6F33A5F48176CC58C59E /* Pods_Reeder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reeder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B01C3BB8E2B0134A6693A96 /* Pods-Reeder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reeder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reeder/Pods-Reeder.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,12 +135,14 @@
 			isa = PBXGroup;
 			children = (
 				026820751EBD2A0300B4B678 /* Main.storyboard */,
+				02B58D8E1EC268F8002115D1 /* Navigation.storyboard */,
 				0217DAA91EC0EC23006DF2AA /* RssWebsiteCollectionItem.swift */,
 				0217DAAA1EC0EC23006DF2AA /* RssWebsiteCollectionItem.xib */,
 				023148931EBFA36E0050306B /* AddCategory.storyboard */,
 				029124D81EBF687E00E2231E /* AddModal.storyboard */,
 				026820831EBD381F00B4B678 /* ReederSplitView.swift */,
 				029124CF1EBF2FEC00E2231E /* NavbarContainer.swift */,
+				02B58D8C1EC2644C002115D1 /* FeedCollectionView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -143,11 +151,12 @@
 			isa = PBXGroup;
 			children = (
 				0268206E1EBD2A0300B4B678 /* ViewController.swift */,
-				0268207E1EBD368700B4B678 /* NavigationViewController.swift */,
 				026820801EBD371900B4B678 /* ReederSplitViewController.swift */,
+				0268207E1EBD368700B4B678 /* NavigationViewController.swift */,
 				029124D31EBF5CD700E2231E /* addFeedModalViewController.swift */,
 				023148961EBFA81A0050306B /* AddCategoryViewController.swift */,
 				0217DAA71EC0E26D006DF2AA /* RssFeedMenu.swift */,
+				02B58D881EC23C6F002115D1 /* AddMenuPopOver.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -248,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B58D901EC268F8002115D1 /* Navigation.storyboard in Resources */,
 				023148951EBFA36E0050306B /* AddCategory.storyboard in Resources */,
 				029124D91EBF687E00E2231E /* AddModal.storyboard in Resources */,
 				0217DAAC1EC0EC23006DF2AA /* RssWebsiteCollectionItem.xib in Resources */,
@@ -312,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				029124D41EBF5CD700E2231E /* addFeedModalViewController.swift in Sources */,
+				02B58D8D1EC2644C002115D1 /* FeedCollectionView.swift in Sources */,
 				026820841EBD381F00B4B678 /* ReederSplitView.swift in Sources */,
 				026820721EBD2A0300B4B678 /* Reeder.xcdatamodeld in Sources */,
 				023148C71EBFE6B90050306B /* Categories+CoreDataClass.swift in Sources */,
@@ -327,6 +338,7 @@
 				029124D01EBF2FEC00E2231E /* NavbarContainer.swift in Sources */,
 				023148C41EBFE6B90050306B /* Website+CoreDataProperties.swift in Sources */,
 				0268206D1EBD2A0300B4B678 /* AppDelegate.swift in Sources */,
+				02B58D891EC23C6F002115D1 /* AddMenuPopOver.swift in Sources */,
 				0217DAAB1EC0EC23006DF2AA /* RssWebsiteCollectionItem.swift in Sources */,
 				0268207F1EBD368700B4B678 /* NavigationViewController.swift in Sources */,
 				023148971EBFA81A0050306B /* AddCategoryViewController.swift in Sources */,
@@ -350,6 +362,14 @@
 				026820761EBD2A0300B4B678 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		02B58D8E1EC268F8002115D1 /* Navigation.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02B58D8F1EC268F8002115D1 /* Base */,
+			);
+			name = Navigation.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

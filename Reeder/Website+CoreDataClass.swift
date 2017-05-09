@@ -12,4 +12,11 @@ import CoreData
 @objc(Website)
 public class Website: NSManagedObject {
 
+//    func getWebsiteMetaData() -> NSFetchRequest<Website> {
+//
+//        let fetchWebsites = Website.fetchRequest() as NSFetchRequest<Website>
+//    
+//        return fetchWebsites
+//        
+//    }
 }

@@ -10,6 +10,8 @@ import Cocoa
 
 class ReederSplitViewController: NSSplitViewController {
 
+    @IBOutlet var NavigationSplitViewItem: NSSplitViewItem!
+    @IBOutlet var ContentSplitViewControllerItem: NSSplitViewItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
